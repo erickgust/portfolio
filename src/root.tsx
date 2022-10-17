@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { App } from './app'
 import { theme } from './resources/theme/theme'
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +21,7 @@ export function Root () {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <h1>Root</h1>
+      <App />
     </ThemeProvider>
   )
 }
