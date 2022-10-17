@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Root } from './root'
 
 const rootElement = document.querySelector('[data-js="root"]')
 
@@ -9,6 +10,6 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <h1>Hello world</h1>
+    <Root />
   </StrictMode>,
 )
