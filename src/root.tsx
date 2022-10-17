@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { theme } from './resources/theme/theme'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -11,14 +12,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'DM Sans', sans-serif;
+    background-color: ${({ theme }) => theme.colors.dark}
   }
 `
 
 export function Root () {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <h1>Root</h1>
-    </>
+    </ThemeProvider>
   )
 }
