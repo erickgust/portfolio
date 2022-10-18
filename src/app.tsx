@@ -1,10 +1,11 @@
 import { Header } from './header'
+import { Hero } from './hero'
 
 export function App () {
   return (
     <>
       <Header />
-      <h1>App</h1>
+      <Hero />
     </>
   )
 }
