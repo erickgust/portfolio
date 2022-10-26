@@ -1,4 +1,5 @@
 import markee from '@/ui/markee.png'
+import { projects } from './projects-data'
 import * as S from './projects-styles'
 
 export function Projects () {
@@ -7,20 +8,18 @@ export function Projects () {
       <S.Title>Projetos</S.Title>
 
       <S.Container>
-        <S.Article>
-          <a href="https://github.com/erickgust/markee" target="_blank" rel="noreferrer">
-            <img src={markee} alt="Logo do projeto Markee" />
-          </a>
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
-        <S.Article>
-          <a href="https://github.com/erickgust/calculator-js" target="_blank" rel="noreferrer">
-            <div>Calculator</div>
-          </a>
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
+        {projects.map(project => (
+          <S.Article key={project.id}>
+            <a href={project.url} target="_blank" rel="noreferrer">
+              {project.banner
+                ? <img src={project.banner.src} alt={project.banner.alt} />
+                : <div>{project.title}</div>
+              }
+            </a>
+            <strong>{project.title}</strong>
+            <p>{project.techs}</p>
+          </S.Article>
+        ))}
       </S.Container>
     </S.Section>
   )
