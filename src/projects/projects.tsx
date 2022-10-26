@@ -1,10 +1,11 @@
+import { Section } from '@/resources/section'
 import { Title } from '@/resources/title'
 import { projects } from './projects-data'
 import * as S from './projects-styles'
 
 export function Projects () {
   return (
-    <S.Section>
+    <Section>
       <Title>Projetos</Title>
 
       <S.Container>
@@ -21,6 +22,6 @@ export function Projects () {
           </S.Article>
         ))}
       </S.Container>
-    </S.Section>
+    </Section>
   )
 }

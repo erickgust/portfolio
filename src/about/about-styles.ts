@@ -1,25 +1,19 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
+export const Div = styled.div`
+  margin-bottom: 6.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 5.6rem 0;
+`
 
-  > div {
-    text-align: center;
-    margin-bottom: 6.4rem;
-  }
-
-  > address {
-    font-style: normal;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2.4rem;
-  }
+export const Address = styled.address`
+  font-style: normal;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2.4rem;
 `
 
 export const Desc = styled.p`

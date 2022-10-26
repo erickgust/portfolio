@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components'
 
-export const Section = styled.section`
-  margin: 5.6rem 0;
-`
-
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));

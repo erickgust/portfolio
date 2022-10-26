@@ -1,3 +1,4 @@
+import { Section } from '@/resources/section'
 import { Title } from '@/resources/title'
 import * as Icon from '@/ui/icons'
 import * as S from './about-styles'
@@ -39,8 +40,8 @@ const contacts: Contact[] = [
 
 export function About () {
   return (
-    <S.Section>
-      <div>
+    <Section>
+      <S.Div>
         <Title>Sobre mim</Title>
         <S.Desc>
           Sou desenvolvedor web focado principalmente no front-end.
@@ -49,14 +50,14 @@ export function About () {
           e TypeScript. Comecei na área estudando lógica em Python, então fui
           para web com JavaScript, HTML e CSS.
         </S.Desc>
-      </div>
+      </S.Div>
 
-    <address>
+    <S.Address>
       {contacts.map((contact, index) => (
         <ContactCard key={index} {...contact} />
       ))}
-    </address>
+    </S.Address>
 
-    </S.Section>
+    </Section>
   )
 }
