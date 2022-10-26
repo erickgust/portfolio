@@ -8,32 +8,16 @@ export function Projects () {
 
       <S.Container>
         <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
+          <a href="https://github.com/erickgust/markee" target="_blank" rel="noreferrer">
+            <img src={markee} alt="Logo do projeto Markee" />
+          </a>
           <strong>Markee</strong>
           <p>Tecnologias: React, TypeScript e Styled Components.</p>
         </S.Article>
         <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
-        <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
-        <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
-        <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
-          <strong>Markee</strong>
-          <p>Tecnologias: React, TypeScript e Styled Components.</p>
-        </S.Article>
-        <S.Article>
-          <img src={markee} alt="Logo do projeto Markee" />
+          <a href="https://github.com/erickgust/calculator-js" target="_blank" rel="noreferrer">
+            <div>Calculator</div>
+          </a>
           <strong>Markee</strong>
           <p>Tecnologias: React, TypeScript e Styled Components.</p>
         </S.Article>
