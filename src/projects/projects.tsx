@@ -1,11 +1,11 @@
-import markee from '@/ui/markee.png'
+import { Title } from '@/resources/title'
 import { projects } from './projects-data'
 import * as S from './projects-styles'
 
 export function Projects () {
   return (
     <S.Section>
-      <S.Title>Projetos</S.Title>
+      <Title>Projetos</Title>
 
       <S.Container>
         {projects.map(project => (

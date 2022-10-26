@@ -4,11 +4,6 @@ export const Section = styled.section`
   margin: 5.6rem 0;
 `
 
-export const Title = styled.h2`
-  font-size: 3.2rem;
-  color: ${({ theme }) => theme.colors.white};
-`
-
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));

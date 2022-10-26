@@ -1,3 +1,4 @@
+import { Title } from '@/resources/title'
 import * as Icon from '@/ui/icons'
 import * as S from './about-styles'
 import { ContactCard } from './contact-card'
@@ -40,7 +41,7 @@ export function About () {
   return (
     <S.Section>
       <div>
-        <S.Title>Sobre mim</S.Title>
+        <Title>Sobre mim</Title>
         <S.Desc>
           Sou desenvolvedor web focado principalmente no front-end.
           <br />

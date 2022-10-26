@@ -22,11 +22,6 @@ export const Section = styled.section`
   }
 `
 
-export const Title = styled.h2`
-  font-size: 3.2rem;
-  color: ${({ theme }) => theme.colors.white};
-`
-
 export const Desc = styled.p`
   font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.gray.main};
