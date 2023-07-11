@@ -39,16 +39,24 @@ export const ContactContainer = styled.article`
     > img {
       vertical-align: middle;
     }
+
+    @media (max-width: 768px) {
+        padding: 1.2rem;
+
+        > img {
+          width: 2.4rem;
+        }
+      }
   }
 
   > strong {
     color: ${({ theme }) => theme.colors.white};
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 1.215rem + 0.513vw, 1.8rem);
     line-height: 1.5;
   }
 
   > small {
     color: ${({ theme }) => theme.colors.gray.main};
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 1.015rem + 0.513vw, 1.6rem);
   }
 `
