@@ -7,10 +7,11 @@ export function Hero () {
       <S.Main>
         <h1>Olá, meu nome é Erick! 😃</h1>
         <p>Desenvolvedor Front-End & UI Designer</p>
-        <div>
+
+        <S.InfoButtons>
           <S.Button type="button" primary>Download CV</S.Button>
           <S.Button type="button">Entrar em contato</S.Button>
-        </div>
+        </S.InfoButtons>
       </S.Main>
 
       <aside>

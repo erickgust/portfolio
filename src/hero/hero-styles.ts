@@ -5,6 +5,16 @@ export const Section = styled.section`
   justify-content: space-between;
   align-items: center;
   height: 50rem;
+
+  @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+
+    aside {
+      display: none;
+    }
+  }
 `
 
 export const Main = styled.main`
@@ -27,6 +37,14 @@ type ButtonProps = {
   primary?: boolean
 }
 
+export const InfoButtons = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+`
+
 export const Button = styled.button<ButtonProps>`${({ theme, primary }) => css`
   font-family: inherit;
   font-size: 1.4rem;
@@ -44,8 +62,4 @@ export const Button = styled.button<ButtonProps>`${({ theme, primary }) => css`
     color: ${theme.colors.dark};
     background-color: ${theme.colors.greenLight};
   `}
-
-  & + & {
-    margin-left: 1.6rem;
-  }
 `}`
