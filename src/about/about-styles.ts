@@ -17,10 +17,11 @@ export const Address = styled.address`
 `
 
 export const Desc = styled.p`
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 1.215rem + 0.513vw, 1.8rem);
   color: ${({ theme }) => theme.colors.gray.main};
   text-align: center;
   max-width: 72rem;
+  margin: 0;
 `
 
 export const ContactContainer = styled.article`
