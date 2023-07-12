@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(31rem, 1fr));
   gap: 4rem;
 `
 
@@ -48,5 +48,22 @@ export const Article = styled.article`${({ theme }) => css`
   p {
     color: ${theme.colors.gray.main};
     font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.6rem 2rem;
+
+    div {
+      font-size: 2.4rem;
+    }
+
+    strong {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
   }
 `}`
