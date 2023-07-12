@@ -22,11 +22,11 @@ export const Main = styled.main`
   max-width: 34rem;
 
   h1 {
-    font-size: 3.6rem;
+    font-size: clamp(2.4rem, 1.846rem + 1.538vw, 3.6rem);
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: clamp(1.6rem, 1.508rem + 0.256vw, 1.8rem);
     color: ${({ theme }) => theme.colors.gray.main};
     font-weight: 500;
     margin: 1.6rem 0 3.2rem;
