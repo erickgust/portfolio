@@ -21,7 +21,7 @@ function SkillsCard ({ lang }: SkillsCardProps) {
 
   return (
     <S.Article>
-      <Icon lang={lang} title={lang} />
+      <Icon title={lang} />
     </S.Article>
   )
 }
