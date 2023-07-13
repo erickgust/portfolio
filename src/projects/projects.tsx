@@ -6,7 +6,7 @@ import * as S from './projects-styles'
 export function Projects () {
   return (
     <Section>
-      <Title>Projetos</Title>
+      <Title id='projects'>Projetos</Title>
 
       <S.Container>
         {projects.map(project => (

@@ -42,7 +42,8 @@ export function About () {
   return (
     <Section>
       <S.Div>
-        <Title>Sobre mim</Title>
+        <Title id='about'>Sobre mim</Title>
+
         <S.Desc>
           Sou desenvolvedor web focado principalmente no front-end.
           <br />

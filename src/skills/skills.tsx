@@ -29,7 +29,7 @@ function SkillsCard ({ lang }: SkillsCardProps) {
 export function Skills () {
   return (
     <Section>
-      <Title>Minhas skills</Title>
+      <Title id='skills'>Minhas skills</Title>
 
       <S.Container>
         <SkillsCard lang='html'/>
