@@ -41,6 +41,13 @@ export function Header () {
     handleModalClose,
   } = useModal()
 
+  const links = [
+    { title: 'Sobre mim', href: '#about' },
+    { title: 'Projetos', href: '#projects' },
+    { title: 'Serviços', href: '#services' },
+    { title: 'Minhas skills', href: '#skills' },
+  ]
+
   return (
     <S.Header>
       <S.HomeLink href="#">
@@ -49,10 +56,11 @@ export function Header () {
 
       <nav>
         <S.List>
-          <li><S.Link href="#about">Sobre mim</S.Link></li>
-          <li><S.Link href="#projects">Projetos</S.Link></li>
-          <li><S.Link href="#services">Serviços</S.Link></li>
-          <li><S.Link href="#skills">Minhas skills</S.Link></li>
+          {links.map(link => (
+            <li key={link.href}>
+              <S.Link href={link.href}>{link.title}</S.Link>
+            </li>
+          ))}
         </S.List>
       </nav>
 
@@ -63,21 +71,11 @@ export function Header () {
       {isModalOpen && (
         <S.Overlay onClick={handleModalClose}>
           <S.MobileMenu onClick={e => e.stopPropagation()}>
-            <S.MobileMenuItem onClick={handleModalClose}>
-              <S.Link href="#about">Sobre mim</S.Link>
-            </S.MobileMenuItem>
-
-            <S.MobileMenuItem onClick={handleModalClose}>
-              <S.Link href="#projects">Projetos</S.Link>
-            </S.MobileMenuItem>
-
-            <S.MobileMenuItem onClick={handleModalClose}>
-              <S.Link href="#services">Serviços</S.Link>
-            </S.MobileMenuItem>
-
-            <S.MobileMenuItem onClick={handleModalClose}>
-              <S.Link href="#skills">Minhas skills</S.Link>
-            </S.MobileMenuItem>
+            {links.map(link => (
+              <S.MobileMenuItem key={link.href} onClick={handleModalClose}>
+                <S.Link href={link.href}>{link.title}</S.Link>
+              </S.MobileMenuItem>
+            ))}
           </S.MobileMenu>
         </S.Overlay>
       )}
