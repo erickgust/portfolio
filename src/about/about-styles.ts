@@ -56,8 +56,9 @@ export const ContactContainer = styled.article`
     line-height: 1.5;
   }
 
-  > small {
+  > small, a {
     color: ${({ theme }) => theme.colors.gray.main};
     font-size: clamp(1.2rem, 1.015rem + 0.513vw, 1.6rem);
+    text-decoration: none;
   }
 `

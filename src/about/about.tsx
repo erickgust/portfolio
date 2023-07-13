@@ -9,6 +9,7 @@ export type Contact = {
   desc: string
   src: string
   alt: string
+  url?: string
 }
 
 const contacts: Contact[] = [
@@ -23,18 +24,21 @@ const contacts: Contact[] = [
     alt: 'Ícone de email',
     title: 'E-mail',
     desc: 'erick.prussak@gmail.com',
+    url: 'mailto:erick.prussak@gmail.com',
   },
   {
     src: Icon.github,
     alt: 'Ícone do GitHub',
     title: 'GitHub',
     desc: '@erickgust',
+    url: 'https://www.github.com/erickgust',
   },
   {
     src: Icon.phone,
     alt: 'Ícone de Telefone',
     title: 'Telefone',
     desc: '(47) 99994-2468',
+    url: 'tel:+5547999942468',
   },
 ]
 
