@@ -13,15 +13,15 @@ export const Container = styled.div`
 export const Article = styled.article`${({ theme }) => css`
   border: 1px solid ${theme.colors.gray[200]};
   background-color: ${theme.colors.gray[400]};
-  min-width: 15rem;
-  height: 15rem;
+  min-width: 14rem;
+  height: 14rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
   svg {
     width: 100%;
-    max-width: 8rem;
+    max-width: 7.5rem;
   }
 
   @media (max-width: 768px) {
