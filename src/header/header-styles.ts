@@ -5,6 +5,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `
 
 export const List = styled.ul`
@@ -25,4 +26,51 @@ export const Link = styled.a`
 
 export const HomeLink = styled(Link)`
   font-size: 2.6rem;
+  z-index: 10;
+`
+
+export const MobileMenuButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  width: 4rem;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`
+
+export const MobileMenu = styled.ul`
+  position: absolute;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  background: ${({ theme }) => theme.colors.dark};
+
+  margin-top: 4rem;
+  padding: 2.4rem;
+  gap: 1.6rem;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+export const MobileMenuItem = styled.li`
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  a {
+    padding: 1.2rem;
+    width: 100%;
+  }
 `
