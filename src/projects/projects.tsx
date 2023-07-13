@@ -11,10 +11,10 @@ export function Projects () {
       <S.Container>
         {projects.map(project => (
           <S.Article key={project.id}>
-            <a href={project.url} target="_blank" rel="noreferrer">
+            <a href={project.url} target="_blank" rel="noreferrer" aria-label={`Link para o projeto ${project.title}`}>
               {project.banner
                 ? <img src={project.banner.src} alt={project.banner.alt} />
-                : <div>{project.title}</div>
+                : <div role="img" aria-label={`Imagem do projeto ${project.title}`}>{project.title}</div>
               }
             </a>
             <strong>{project.title}</strong>

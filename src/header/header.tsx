@@ -42,15 +42,15 @@ export function Header () {
   } = useModal()
 
   const links = [
-    { title: 'Sobre mim', href: '#about' },
-    { title: 'Projetos', href: '#projects' },
-    { title: 'Serviços', href: '#services' },
-    { title: 'Minhas skills', href: '#skills' },
+    { title: 'Sobre mim', href: '#about', label: 'Ir para a seção Sobre mim' },
+    { title: 'Projetos', href: '#projects', label: 'Ir para a seção Projetos' },
+    { title: 'Serviços', href: '#services', label: 'Ir para a seção Serviços' },
+    { title: 'Minhas skills', href: '#skills', label: 'Ir para a seção Minhas skills' },
   ]
 
   return (
     <S.Header>
-      <S.HomeLink href="#">
+      <S.HomeLink href="#" title="Ir para a página inicial">
         <strong>Portfólio</strong>
       </S.HomeLink>
 
@@ -58,13 +58,13 @@ export function Header () {
         <S.List>
           {links.map(link => (
             <li key={link.href}>
-              <S.Link href={link.href}>{link.title}</S.Link>
+              <S.Link href={link.href} aria-label={link.label} tabIndex={0}>{link.title}</S.Link>
             </li>
           ))}
         </S.List>
       </nav>
 
-      <S.MobileMenuButton onClick={handleModalToggle}>
+      <S.MobileMenuButton onClick={handleModalToggle} aria-label="Abrir menu de navegação">
         <MobileMenuIcon />
       </S.MobileMenuButton>
 
@@ -73,7 +73,9 @@ export function Header () {
           <S.MobileMenu onClick={e => e.stopPropagation()}>
             {links.map(link => (
               <S.MobileMenuItem key={link.href} onClick={handleModalClose}>
-                <S.Link href={link.href}>{link.title}</S.Link>
+                <S.Link href={link.href} aria-label={link.label} tabIndex={0}>
+                  {link.title}
+                </S.Link>
               </S.MobileMenuItem>
             ))}
           </S.MobileMenu>
