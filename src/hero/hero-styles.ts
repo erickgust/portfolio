@@ -50,6 +50,7 @@ export const Button = styled.button<ButtonProps>`${({ theme, primary }) => css`
   font-size: 1.4rem;
   font-weight: 500;
   color: ${theme.colors.white};
+  text-decoration: none;
 
   cursor: pointer;
 

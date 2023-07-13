@@ -2,6 +2,8 @@ import { ReactComponent as HeroImage } from '@/ui/hero.svg'
 import * as S from './hero-styles'
 
 export function Hero () {
+  const phoneNumber = '+5547999942468'
+
   return (
     <S.Section>
       <S.Main>
@@ -10,7 +12,16 @@ export function Hero () {
 
         <S.InfoButtons>
           <S.Button type="button" primary aria-label="Download CV">Download CV</S.Button>
-          <S.Button type="button" aria-label="Entrar em contato">Entrar em contato</S.Button>
+
+          <S.Button
+            as='a'
+            href={`https://wa.me/${phoneNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Entrar em contato"
+          >
+            Entrar em contato
+          </S.Button>
         </S.InfoButtons>
       </S.Main>
 
