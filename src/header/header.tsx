@@ -1,13 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as S from './header-styles'
 import { ReactComponent as MobileMenuIcon } from '@/ui/icons/menu.svg'
 
-export function Header () {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+function useModal () {
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-  function handleMobileMenuClick () {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+  function handleModalClose () {
+    setIsModalOpen(false)
   }
+
+  function handleModalToggle () {
+    setIsModalOpen(prevState => !prevState)
+  }
+
+  useEffect(() => {
+    function handleEscape (event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsModalOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [])
+
+  return {
+    isModalOpen,
+    handleModalClose,
+    handleModalToggle,
+  }
+}
+
+export function Header () {
+  const {
+    isModalOpen,
+    handleModalToggle,
+    handleModalClose,
+  } = useModal()
 
   return (
     <S.Header>
@@ -15,26 +47,39 @@ export function Header () {
         <strong>Portfólio</strong>
       </S.HomeLink>
 
-      {/* <nav>
+      <nav>
         <S.List>
           <li><S.Link href="#about">Sobre mim</S.Link></li>
           <li><S.Link href="#projects">Projetos</S.Link></li>
           <li><S.Link href="#services">Serviços</S.Link></li>
           <li><S.Link href="#skills">Minhas skills</S.Link></li>
         </S.List>
-      </nav> */}
+      </nav>
 
-      <S.MobileMenuButton onClick={handleMobileMenuClick}>
+      <S.MobileMenuButton onClick={handleModalToggle}>
         <MobileMenuIcon />
       </S.MobileMenuButton>
 
-      {isMobileMenuOpen && (
-        <S.MobileMenu>
-          <S.MobileMenuItem><S.Link href="#about">Sobre mim</S.Link></S.MobileMenuItem>
-          <S.MobileMenuItem><S.Link href="#projects">Projetos</S.Link></S.MobileMenuItem>
-          <S.MobileMenuItem><S.Link href="#services">Serviços</S.Link></S.MobileMenuItem>
-          <S.MobileMenuItem><S.Link href="#skills">Minhas skills</S.Link></S.MobileMenuItem>
-        </S.MobileMenu>
+      {isModalOpen && (
+        <S.Overlay onClick={handleModalClose}>
+          <S.MobileMenu onClick={e => e.stopPropagation()}>
+            <S.MobileMenuItem onClick={handleModalClose}>
+              <S.Link href="#about">Sobre mim</S.Link>
+            </S.MobileMenuItem>
+
+            <S.MobileMenuItem onClick={handleModalClose}>
+              <S.Link href="#projects">Projetos</S.Link>
+            </S.MobileMenuItem>
+
+            <S.MobileMenuItem onClick={handleModalClose}>
+              <S.Link href="#services">Serviços</S.Link>
+            </S.MobileMenuItem>
+
+            <S.MobileMenuItem onClick={handleModalClose}>
+              <S.Link href="#skills">Minhas skills</S.Link>
+            </S.MobileMenuItem>
+          </S.MobileMenu>
+        </S.Overlay>
       )}
     </S.Header>
   )

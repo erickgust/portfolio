@@ -16,6 +16,10 @@ export const List = styled.ul`
   li {
     display: inline-block;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const Link = styled.a`
@@ -40,6 +44,16 @@ export const MobileMenuButton = styled.button`
   @media (max-width: 768px) {
     display: block;
   }
+`
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(2px);
 `
 
 export const MobileMenu = styled.ul`
