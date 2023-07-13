@@ -9,13 +9,13 @@ export function Hero () {
         <p>Desenvolvedor Front-End & UI Designer</p>
 
         <S.InfoButtons>
-          <S.Button type="button" primary>Download CV</S.Button>
-          <S.Button type="button">Entrar em contato</S.Button>
+          <S.Button type="button" primary aria-label="Download CV">Download CV</S.Button>
+          <S.Button type="button" aria-label="Entrar em contato">Entrar em contato</S.Button>
         </S.InfoButtons>
       </S.Main>
 
-      <aside>
-        <HeroImage />
+      <aside role="complementary">
+        <HeroImage title="Hero image" />
       </aside>
     </S.Section>
   )
