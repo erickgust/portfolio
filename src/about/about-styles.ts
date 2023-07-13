@@ -45,6 +45,7 @@ export const ContactContainer = styled.article`
 
         > img {
           width: 2.4rem;
+          height: 2.4rem;
         }
       }
   }
