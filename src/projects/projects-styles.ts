@@ -25,6 +25,7 @@ export const Article = styled.article`${({ theme }) => css`
     font-weight: 700;
     font-size: 3.2rem;
     background-color: ${theme.colors.dark};
+    text-align: center;
   }
 
   a {
