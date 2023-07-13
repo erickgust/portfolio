@@ -1,6 +1,6 @@
-import markee from '@/ui/markee.png'
-import landing from '@/ui/landing-page.png'
-import letmeask from '@/ui/letmeask.png'
+import markee from '@/ui/markee.webp'
+import landing from '@/ui/landing-page.webp'
+import letmeask from '@/ui/letmeask.webp'
 
 type Project = {
   title: string
