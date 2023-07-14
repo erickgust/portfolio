@@ -1,6 +1,7 @@
 import markee from '@/ui/markee.webp'
 import landing from '@/ui/landing-page.webp'
 import letmeask from '@/ui/letmeask.webp'
+import tmdb from '@/ui/tmdb.webp'
 
 type Project = {
   title: string
@@ -31,10 +32,14 @@ export const projects: Project[] = [
     id: 2,
   },
   {
-    title: 'Github Profile',
-    techs: 'TypeScript, HTML e CSS',
-    url: 'https://github.com/erickgust/github-profile',
+    title: 'TMDB Movies',
+    techs: 'React, TypeScript, Tailwind e React Query',
+    url: 'https://github.com/erickgust/promobit-tmdb',
     id: 3,
+    banner: {
+      src: tmdb,
+      alt: 'Banner do projeto de listagem de filmes',
+    },
   },
   {
     title: 'Landing Page Agency',
