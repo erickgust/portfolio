@@ -1,5 +1,19 @@
-import { ReactComponent as HeroImage } from '@/ui/hero.svg'
 import * as S from './hero-styles'
+import styled, { keyframes } from 'styled-components'
+import { ReactComponent as HeroImage } from '@/ui/hero.svg'
+
+const orbit = keyframes`
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+`
+
+const AnimatedHeroImage = styled(HeroImage)`
+  animation: ${orbit} 8s linear infinite;
+`
 
 export function Hero () {
   const phoneNumber = '+5547999942468'
@@ -26,7 +40,7 @@ export function Hero () {
       </S.Main>
 
       <aside role="complementary">
-        <HeroImage title="Hero image" />
+        <AnimatedHeroImage title="Hero image" />
       </aside>
     </S.Section>
   )
