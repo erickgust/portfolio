@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     title: 'Markee',
     techs: 'React, TypeScript e Styled Components',
-    url: 'https://github.com/erickgust/markee',
+    url: 'https://markee-gus.netlify.app/',
     id: 3,
     banner: {
       src: markee,
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     title: 'Landing Page Agency',
     techs: 'HTML e CSS',
-    url: 'https://github.com/erickgust/landing-page-agency',
+    url: 'https://erickgust.github.io/landing-page-agency/',
     id: 4,
     banner: {
       src: landing,
