@@ -1,6 +1,7 @@
 import markee from '@/ui/markee.webp'
 import landing from '@/ui/landing-page.webp'
 import letmeask from '@/ui/letmeask.webp'
+import mycontacts from '@/ui/mycontacts.webp'
 import tmdb from '@/ui/tmdb.webp'
 
 type Project = {
@@ -16,29 +17,33 @@ type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Markee',
-    techs: 'React, TypeScript e Styled Components',
-    url: 'https://github.com/erickgust/markee',
-    id: 1,
-    banner: {
-      src: markee,
-      alt: 'Banner do projeto Markee',
-    },
-  },
-  {
-    title: 'Calculator',
-    techs: 'JavaScript, HTML e CSS',
-    url: 'https://github.com/erickgust/calculator-js',
+    title: 'MyContacts',
+    techs: 'TypeScript, React, NodeJS e PostgreSQL',
+    url: 'https://github.com/erickgust/my-contacts-front',
     id: 2,
+    banner: {
+      src: mycontacts,
+      alt: 'Banner do projeto MyContacts',
+    },
   },
   {
     title: 'TMDB Movies',
     techs: 'React, TypeScript, Tailwind e React Query',
     url: 'https://github.com/erickgust/promobit-tmdb',
-    id: 3,
+    id: 2,
     banner: {
       src: tmdb,
       alt: 'Banner do projeto de listagem de filmes',
+    },
+  },
+  {
+    title: 'Markee',
+    techs: 'React, TypeScript e Styled Components',
+    url: 'https://github.com/erickgust/markee',
+    id: 3,
+    banner: {
+      src: markee,
+      alt: 'Banner do projeto Markee',
     },
   },
   {
@@ -62,9 +67,9 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Portfólio FiredLabs',
+    title: 'Calculator',
     techs: 'JavaScript, HTML e CSS',
-    url: 'https://github.com/erickgust/html-css-firedlabs',
+    url: 'https://github.com/erickgust/calculator-js',
     id: 6,
   },
 ]
