@@ -44,7 +44,7 @@ export function Header () {
   const links = [
     { title: 'Sobre mim', href: '#about', label: 'Ir para a seção Sobre mim' },
     { title: 'Projetos', href: '#projects', label: 'Ir para a seção Projetos' },
-    { title: 'Serviços', href: '#services', label: 'Ir para a seção Serviços' },
+    // { title: 'Serviços', href: '#services', label: 'Ir para a seção Serviços' },
     { title: 'Minhas skills', href: '#skills', label: 'Ir para a seção Minhas skills' },
   ]
 
