@@ -25,7 +25,16 @@ export function Hero () {
         <p>Desenvolvedor Front-End & UI Designer</p>
 
         <S.InfoButtons>
-          <S.Button type="button" primary aria-label="Download CV">Download CV</S.Button>
+          <S.Button
+            as='a'
+            primary
+            aria-label="Download CV"
+            href='https://github.com/erickgust/portfolio/blob/main/cv/erick-cv.pdf'
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download CV
+          </S.Button>
 
           <S.Button
             as='a'
