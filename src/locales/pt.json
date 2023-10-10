@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "myName": "Olá, meu nome é {{name}}!",
+    "role": "Eu sou um Desenvolvedor Front-end",
+    "contactMe": "Entrar em contato",
+    "header": {
+      "home": "Portfólio",
+      "homeTitle": "Ir para o início",
+      "about": "Sobre mim",
+      "aboutLabel": "Ir para a seção Sobre mim",
+      "projects": "Projetos",
+      "projectsLabel": "Ir para a seção Projetos",
+      "skills": "Minhas skills",
+      "skillsLabel": "Ir para a seção Minhas skills",
+      "menuLabel": "Abrir menu de navegação"
+    }
+  }
+}

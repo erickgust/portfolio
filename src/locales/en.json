@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "myName": "Hello, my name is {{name}}!",
+    "role": "I am a Front-end Developer",
+    "contactMe": "Contact me",
+    "header": {
+      "home": "Portfolio",
+      "homeTitle": "Go to home page",
+      "about": "About me",
+      "aboutLabel": "Go to section About me",
+      "projects": "Projects",
+      "projectsLabel": "Go to section Projects",
+      "skills": "My skills",
+      "skillsLabel": "Go to section My skills",
+      "menuLabel": "Open navigation menu"
+    }
+  }
+}
