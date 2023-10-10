@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import * as S from './header-styles'
 import { ReactComponent as MobileMenuIcon } from '@/ui/icons/menu.svg'
@@ -40,18 +41,18 @@ export function Header () {
     handleModalToggle,
     handleModalClose,
   } = useModal()
+  const { t } = useTranslation()
 
   const links = [
-    { title: 'Sobre mim', href: '#about', label: 'Ir para a seção Sobre mim' },
-    { title: 'Projetos', href: '#projects', label: 'Ir para a seção Projetos' },
-    // { title: 'Serviços', href: '#services', label: 'Ir para a seção Serviços' },
-    { title: 'Minhas skills', href: '#skills', label: 'Ir para a seção Minhas skills' },
+    { title: t('header.about'), href: '#about', label: t('header.aboutLabel') },
+    { title: t('header.projects'), href: '#projects', label: t('header.projectsLabel') },
+    { title: t('header.skills'), href: '#skills', label: t('header.skillsLabel') },
   ]
 
   return (
     <S.Header>
-      <S.HomeLink href="#" title="Ir para a página inicial">
-        <strong>Portfólio</strong>
+      <S.HomeLink href="#" title={t('header.homeTitle')}>
+        <strong>{t('header.home')}</strong>
       </S.HomeLink>
 
       <nav>
@@ -64,7 +65,7 @@ export function Header () {
         </S.List>
       </nav>
 
-      <S.MobileMenuButton onClick={handleModalToggle} aria-label="Abrir menu de navegação">
+      <S.MobileMenuButton onClick={handleModalToggle} aria-label={t('header.menuLabel')}>
         <MobileMenuIcon />
       </S.MobileMenuButton>
 
