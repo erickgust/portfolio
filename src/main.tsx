@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Root } from './root'
+import './i18n'
 
 const rootElement = document.querySelector('[data-js="root"]')
 
