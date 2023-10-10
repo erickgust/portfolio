@@ -1,5 +1,8 @@
-import * as S from './hero-styles'
 import styled, { keyframes } from 'styled-components'
+import { useTranslation } from 'react-i18next'
+
+import * as S from './hero-styles'
+
 import { ReactComponent as HeroImage } from '@/ui/hero.svg'
 
 const orbit = keyframes`
@@ -16,13 +19,15 @@ const AnimatedHeroImage = styled(HeroImage)`
 `
 
 export function Hero () {
+  const { t } = useTranslation()
+
   const phoneNumber = '+5547999942468'
 
   return (
     <S.Section>
       <S.Main>
-        <h1>Olá, meu nome é Erick! 😃</h1>
-        <p>Desenvolvedor Front-End & UI Designer</p>
+        <h1>{t('myName', { name: 'Erick' })} 😃</h1>
+        <p>{t('role')}</p>
 
         <S.InfoButtons>
           <S.Button
@@ -41,9 +46,9 @@ export function Hero () {
             href={`https://wa.me/${phoneNumber}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Entrar em contato"
+            aria-label={t('contactMe')}
           >
-            Entrar em contato
+            {t('contactMe')}
           </S.Button>
         </S.InfoButtons>
       </S.Main>
