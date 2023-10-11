@@ -27,6 +27,11 @@
         "githubIconAlt": "Github icon",
         "phoneIconAlt": "Phone icon"
       }
+    },
+    "projects": {
+      "title": "Projects",
+      "projectLabel": "Link to the project {{name}}",
+      "projectAlt": "Image of the project {{name}}"
     }
   }
 }
