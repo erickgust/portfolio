@@ -13,6 +13,20 @@
       "skills": "Minhas skills",
       "skillsLabel": "Ir para a seção Minhas skills",
       "menuLabel": "Abrir menu de navegação"
+    },
+    "aboutMe": {
+      "title": "Sobre mim",
+      "desc": "Olá, eu sou Erick, um desenvolvedor front-end do Brasil.",
+      "desc2": "Sou apaixonado por criar aplicações web e mobile bonitas e funcionais usando tecnologias modernas como React, React Native, TypeScript, NextJS e NodeJS. Também sou estudante de Análise de Sistemas, com previsão de formatura em 2024.",
+      "desc3": "Estou procurando novas oportunidades para trabalhar em projetos desafiadores e empolgantes que possam ter um impacto positivo na vida das pessoas.",
+      "contacts": {
+        "phone": "Telefone",
+        "name": "Meu Nome",
+        "happyFaceIconAlt": "Ícone de rosto feliz",
+        "emailIconAlt": "Ícone de e-mail",
+        "githubIconAlt": "Ícone do GitHub",
+        "phoneIconAlt": "Ícone de telefone"
+      }
     }
   }
 }
