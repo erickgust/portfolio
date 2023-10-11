@@ -2,6 +2,7 @@ import { Section } from '@/resources/section'
 import { Title } from '@/resources/title'
 import * as icon from '@/ui/skills-icons'
 import * as S from './skills-styles'
+import { useTranslation } from 'react-i18next'
 
 type Lang = 'react' | 'typescript' | 'javascript' | 'html' | 'css' | 'tailwind'
 
@@ -27,9 +28,11 @@ function SkillsCard ({ lang }: SkillsCardProps) {
 }
 
 export function Skills () {
+  const { t } = useTranslation()
+
   return (
     <Section>
-      <Title id='skills'>Minhas skills</Title>
+      <Title id='skills'>{t('skills.title')}</Title>
 
       <S.Container>
         <SkillsCard lang='html'/>
