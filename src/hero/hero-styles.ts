@@ -6,7 +6,7 @@ export const Section = styled.section`
   align-items: center;
   height: 50rem;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     height: auto;
     flex-direction: column;
     text-align: center;
@@ -14,6 +14,10 @@ export const Section = styled.section`
     aside {
       display: none;
     }
+  }
+
+  @media screen and (max-width: 1140px) {
+    overflow-x: hidden;
   }
 `
 
