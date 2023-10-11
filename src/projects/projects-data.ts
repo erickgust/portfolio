@@ -11,64 +11,58 @@ type Project = {
   id: number
   banner?: {
     src: string
-    alt: string
   }
 }
 
 export const projects: Project[] = [
   {
     title: 'MyContacts',
-    techs: 'TypeScript, React, NodeJS e PostgreSQL',
+    techs: 'TypeScript, React, NodeJS & PostgreSQL',
     url: 'https://github.com/erickgust/my-contacts-front',
-    id: 2,
+    id: 1,
     banner: {
       src: mycontacts,
-      alt: 'Banner do projeto MyContacts',
     },
   },
   {
     title: 'TMDB Movies',
-    techs: 'React, TypeScript, Tailwind e React Query',
+    techs: 'React, TypeScript, Tailwind & React Query',
     url: 'https://github.com/erickgust/promobit-tmdb',
     id: 2,
     banner: {
       src: tmdb,
-      alt: 'Banner do projeto de listagem de filmes',
     },
   },
   {
     title: 'Markee',
-    techs: 'React, TypeScript e Styled Components',
+    techs: 'React, TypeScript & Styled Components',
     url: 'https://markee-gus.netlify.app/',
     id: 3,
     banner: {
       src: markee,
-      alt: 'Banner do projeto Markee',
     },
   },
   {
     title: 'Landing Page Agency',
-    techs: 'HTML e CSS',
+    techs: 'HTML & CSS',
     url: 'https://erickgust.github.io/landing-page-agency/',
     id: 4,
     banner: {
       src: landing,
-      alt: 'Banner do projeto de landing page',
     },
   },
   {
     title: 'Letmeask',
-    techs: 'React, TypeScript e SCSS',
+    techs: 'React, TypeScript & SCSS',
     url: 'https://github.com/erickgust/letmeask-nlw6',
     id: 5,
     banner: {
       src: letmeask,
-      alt: 'Banner do projeto let me ask',
     },
   },
   {
     title: 'Calculator',
-    techs: 'JavaScript, HTML e CSS',
+    techs: 'JavaScript, HTML & CSS',
     url: 'https://github.com/erickgust/calculator-js',
     id: 6,
   },
