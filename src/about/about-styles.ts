@@ -22,6 +22,11 @@ export const Desc = styled.p`
   text-align: center;
   max-width: 72rem;
   margin: 0;
+
+  > span {
+    margin: 0.8rem 0;
+    display: block;
+  }
 `
 
 export const ContactContainer = styled.article`
