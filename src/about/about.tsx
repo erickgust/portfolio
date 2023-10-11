@@ -53,9 +53,9 @@ export function About () {
 
         <S.Desc>
           {t('aboutMe.desc')}
-          <p />
-          {t('aboutMe.desc2')}
-          <p />
+          <span>
+            {t('aboutMe.desc2')}
+          </span>
           {t('aboutMe.desc3')}
         </S.Desc>
       </S.Div>
