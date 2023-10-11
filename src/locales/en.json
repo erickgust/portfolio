@@ -13,6 +13,20 @@
       "skills": "My skills",
       "skillsLabel": "Go to section My skills",
       "menuLabel": "Open navigation menu"
+    },
+    "aboutMe": {
+      "title": "About me",
+      "desc": "Hi, I’m Erick, a front-end developer from Brazil.",
+      "desc2": "I’m passionate about creating beautiful and functional web and mobile applications using modern technologies such as React, React Native, TypeScript, NextJS and NodeJS. I’m also a student of Information Technology, expected to graduate in 2024.",
+      "desc3": "I’m looking for new opportunities to work on challenging and exciting projects that can make a positive impact on people’s lives.",
+      "contacts": {
+        "phone": "Phone",
+        "name": "My Name",
+        "happyFaceIconAlt": "Happy face icon",
+        "emailIconAlt": "Email icon",
+        "githubIconAlt": "Github icon",
+        "phoneIconAlt": "Phone icon"
+      }
     }
   }
 }

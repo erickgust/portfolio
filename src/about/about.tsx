@@ -1,3 +1,5 @@
+import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 import { Section } from '@/resources/section'
 import { Title } from '@/resources/title'
 import * as Icon from '@/ui/icons'
@@ -12,48 +14,49 @@ export type Contact = {
   url?: string
 }
 
-const contacts: Contact[] = [
-  {
-    src: Icon.smile,
-    alt: 'Ícone de rosto feliz',
-    title: 'Meu Nome',
-    desc: 'Erick Gustavo',
-  },
-  {
-    src: Icon.mail,
-    alt: 'Ícone de email',
-    title: 'E-mail',
-    desc: 'erick.prussak@gmail.com',
-    url: 'mailto:erick.prussak@gmail.com',
-  },
-  {
-    src: Icon.github,
-    alt: 'Ícone do GitHub',
-    title: 'GitHub',
-    desc: '@erickgust',
-    url: 'https://www.github.com/erickgust',
-  },
-  {
-    src: Icon.phone,
-    alt: 'Ícone de Telefone',
-    title: 'Telefone',
-    desc: '(47) 99994-2468',
-    url: 'tel:+5547999942468',
-  },
-]
-
 export function About () {
+  const { t } = useTranslation()
+  const contacts: Contact[] = [
+    {
+      src: Icon.smile,
+      alt: t('aboutMe.contacts.happyFaceIconAlt'),
+      title: t('aboutMe.contacts.name'),
+      desc: 'Erick Gustavo',
+    },
+    {
+      src: Icon.mail,
+      alt: t('aboutMe.contacts.emailIconAlt'),
+      title: 'E-mail',
+      desc: 'erick.prussak@gmail.com',
+      url: 'mailto:erick.prussak@gmail.com',
+    },
+    {
+      src: Icon.github,
+      alt: t('aboutMe.contacts.githubIconAlt'),
+      title: 'GitHub',
+      desc: '@erickgust',
+      url: 'https://www.github.com/erickgust',
+    },
+    {
+      src: Icon.phone,
+      alt: t('aboutMe.contacts.phoneIconAlt'),
+      title: t('aboutMe.contacts.phone'),
+      desc: '(47) 99994-2468',
+      url: 'tel:+5547999942468',
+    },
+  ]
+
   return (
     <Section>
       <S.Div>
-        <Title id='about'>Sobre mim</Title>
+        <Title id='about'>{t('aboutMe.title')}</Title>
 
         <S.Desc>
-          Sou desenvolvedor web focado principalmente no front-end.
-          <br />
-          Atualmente me aprofundando mais sobre testes em projetos com ReactJS
-          e TypeScript. Comecei na área estudando lógica em Python, então fui
-          para web com JavaScript, HTML e CSS.
+          {t('aboutMe.desc')}
+          <p />
+          {t('aboutMe.desc2')}
+          <p />
+          {t('aboutMe.desc3')}
         </S.Desc>
       </S.Div>
 
