@@ -1,3 +1,6 @@
+import pdfEn from '../../static/en-cv.pdf'
+import pdfPt from '../../static/pt-cv.pdf'
+
 import styled, { keyframes } from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
@@ -19,9 +22,10 @@ const AnimatedHeroImage = styled(HeroImage)`
 `
 
 export function Hero () {
-  const { t } = useTranslation()
+  const { t, i18n: { language } } = useTranslation()
 
   const phoneNumber = '+5547999942468'
+  const curriculumPath = language === 'en' ? pdfEn : pdfPt
 
   return (
     <S.Section>
@@ -34,9 +38,8 @@ export function Hero () {
             as='a'
             primary
             aria-label="Download CV"
-            href='https://github.com/erickgust/portfolio/blob/main/cv/erick-cv.pdf'
-            target="_blank"
-            rel="noopener noreferrer"
+            href={curriculumPath}
+            download='cv-erick.pdf'
           >
             Download CV
           </S.Button>
