@@ -32,6 +32,9 @@
       "title": "Projects",
       "projectLabel": "Link to the project {{name}}",
       "projectAlt": "Image of the project {{name}}"
+    },
+    "skills": {
+      "title": "My skills"
     }
   }
 }
