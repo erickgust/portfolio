@@ -12,7 +12,8 @@
       "projectsLabel": "Go to section Projects",
       "skills": "My skills",
       "skillsLabel": "Go to section My skills",
-      "menuLabel": "Open navigation menu"
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
     },
     "aboutMe": {
       "title": "About me",

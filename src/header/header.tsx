@@ -39,6 +39,9 @@ function useModal () {
 
 function LanguageSwitchButton ({ hidden }: { hidden?: boolean}) {
   const { i18n: { language, changeLanguage } } = useTranslation()
+  const switchButtonText = language === 'pt'
+    ? 'Switch to English'
+    : 'Mudar para português'
 
   function handleLanguageChange () {
     const newLanguage = language === 'pt' ? 'en' : 'pt'
@@ -46,7 +49,12 @@ function LanguageSwitchButton ({ hidden }: { hidden?: boolean}) {
   }
 
   return (
-    <S.LanguageSwitchButton onClick={handleLanguageChange} hidden={hidden}>
+    <S.LanguageSwitchButton
+      onClick={handleLanguageChange}
+      hidden={hidden}
+      aria-label={switchButtonText}
+      title={switchButtonText}
+    >
       {language === 'pt' ? <FlagUs /> : <FlagBr />}
     </S.LanguageSwitchButton>
   )
@@ -84,13 +92,23 @@ export function Header () {
 
       <LanguageSwitchButton hidden />
 
-      <S.MobileMenuButton onClick={handleModalToggle} aria-label={t('header.menuLabel')}>
+      <S.MobileMenuButton
+        onClick={handleModalToggle}
+        aria-label={isModalOpen ? t('header.closeMenu') : t('header.openMenu')}
+        title={isModalOpen ? t('header.closeMenu') : t('header.openMenu')}
+        aria-expanded={isModalOpen}
+        aria-controls="mobile-menu"
+        >
         <MobileMenuIcon />
       </S.MobileMenuButton>
 
       {isModalOpen && (
         <S.Overlay onClick={handleModalClose}>
-          <S.MobileMenu onClick={e => e.stopPropagation()}>
+          <S.MobileMenu
+            onClick={e => e.stopPropagation()}
+            id='mobile-menu'
+            role='menu'
+          >
             {links.map(link => (
               <S.MobileMenuItem key={link.href} onClick={handleModalClose}>
                 <S.Link href={link.href} aria-label={link.label} tabIndex={0}>
