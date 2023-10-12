@@ -54,23 +54,25 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100vh;
   backdrop-filter: blur(2px);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const MobileMenu = styled.ul`
-  position: absolute;
   list-style: none;
 
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.dark};
 
-  margin-top: 4rem;
+  margin: 0;
   padding: 2.4rem;
+  padding-top: 6.4rem;
   gap: 1.6rem;
   width: 100%;
 
-  top: 0;
-  left: 0;
   z-index: 1;
 
   @media (min-width: 768px) {
@@ -89,7 +91,11 @@ export const MobileMenuItem = styled.li`
   }
 `
 
-export const LanguageSwitchButton = styled.button`
+type LanguageSwitchProps = {
+  hidden?: boolean
+}
+
+export const LanguageSwitchButton = styled.button<LanguageSwitchProps>`
   background: none;
   border: none;
   cursor: pointer;
@@ -99,4 +105,8 @@ export const LanguageSwitchButton = styled.button`
   font-size: 1.8rem;
   font-weight: 600;
   z-index: 10;
+
+  @media screen and (max-width: 768px) {
+    display: ${({ hidden }) => (hidden ? 'none' : 'flex')};
+  }
 `
