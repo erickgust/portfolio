@@ -37,24 +37,34 @@ function useModal () {
   }
 }
 
+function LanguageSwitchButton ({ hidden }: { hidden?: boolean}) {
+  const { i18n: { language, changeLanguage } } = useTranslation()
+
+  function handleLanguageChange () {
+    const newLanguage = language === 'pt' ? 'en' : 'pt'
+    changeLanguage(newLanguage)
+  }
+
+  return (
+    <S.LanguageSwitchButton onClick={handleLanguageChange} hidden={hidden}>
+      {language === 'pt' ? <FlagUs /> : <FlagBr />}
+    </S.LanguageSwitchButton>
+  )
+}
+
 export function Header () {
   const {
     isModalOpen,
     handleModalToggle,
     handleModalClose,
   } = useModal()
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const links = [
     { title: t('header.about'), href: '#about', label: t('header.aboutLabel') },
     { title: t('header.projects'), href: '#projects', label: t('header.projectsLabel') },
     { title: t('header.skills'), href: '#skills', label: t('header.skillsLabel') },
   ]
-
-  function handleLanguageChange () {
-    const newLanguage = i18n.language === 'pt' ? 'en' : 'pt'
-    i18n.changeLanguage(newLanguage)
-  }
 
   return (
     <S.Header>
@@ -72,9 +82,7 @@ export function Header () {
         </S.List>
       </nav>
 
-      <S.LanguageSwitchButton onClick={handleLanguageChange}>
-        {i18n.language === 'pt' ? <FlagUs /> : <FlagBr />}
-      </S.LanguageSwitchButton>
+      <LanguageSwitchButton hidden />
 
       <S.MobileMenuButton onClick={handleModalToggle} aria-label={t('header.menuLabel')}>
         <MobileMenuIcon />
@@ -90,6 +98,10 @@ export function Header () {
                 </S.Link>
               </S.MobileMenuItem>
             ))}
+
+            <div style={{ alignSelf: 'flex-end' }}>
+              <LanguageSwitchButton />
+            </div>
           </S.MobileMenu>
         </S.Overlay>
       )}
