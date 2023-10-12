@@ -88,3 +88,15 @@ export const MobileMenuItem = styled.li`
     width: 100%;
   }
 `
+
+export const LanguageSwitchButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.white};
+  font-size: 1.8rem;
+  font-weight: 600;
+  z-index: 10;
+`
