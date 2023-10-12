@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
   top: 0;
+  z-index: 10;
+
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -107,7 +109,6 @@ export const LanguageSwitchButton = styled.button<LanguageSwitchProps>`
   color: ${({ theme }) => theme.colors.white};
   font-size: 1.8rem;
   font-weight: 600;
-  z-index: 10;
 
   @media screen and (max-width: 768px) {
     display: ${({ hidden }) => (hidden ? 'none' : 'flex')};
