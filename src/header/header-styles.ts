@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-  margin-top: 3.2rem;
+  top: 0;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  background: ${({ theme }) => theme.colors.dark};
+  padding-top: 3.2rem;
+  padding-bottom: 0.8rem;
 `
 
 export const List = styled.ul`
