@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import * as S from './header-styles'
 import { ReactComponent as MobileMenuIcon } from '@/ui/icons/menu.svg'
+import { ReactComponent as FlagUs } from '@/ui/icons/flag-us.svg'
+import { ReactComponent as FlagBr } from '@/ui/icons/flag-br.svg'
 
 function useModal () {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -41,13 +43,18 @@ export function Header () {
     handleModalToggle,
     handleModalClose,
   } = useModal()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const links = [
     { title: t('header.about'), href: '#about', label: t('header.aboutLabel') },
     { title: t('header.projects'), href: '#projects', label: t('header.projectsLabel') },
     { title: t('header.skills'), href: '#skills', label: t('header.skillsLabel') },
   ]
+
+  function handleLanguageChange () {
+    const newLanguage = i18n.language === 'pt' ? 'en' : 'pt'
+    i18n.changeLanguage(newLanguage)
+  }
 
   return (
     <S.Header>
@@ -64,6 +71,10 @@ export function Header () {
           ))}
         </S.List>
       </nav>
+
+      <S.LanguageSwitchButton onClick={handleLanguageChange}>
+        {i18n.language === 'pt' ? <FlagUs /> : <FlagBr />}
+      </S.LanguageSwitchButton>
 
       <S.MobileMenuButton onClick={handleModalToggle} aria-label={t('header.menuLabel')}>
         <MobileMenuIcon />
