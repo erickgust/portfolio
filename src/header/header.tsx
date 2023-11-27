@@ -66,13 +66,27 @@ export function Header () {
     handleModalToggle,
     handleModalClose,
   } = useModal()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const links = [
     { title: t('header.about'), href: '#about', label: t('header.aboutLabel') },
     { title: t('header.projects'), href: '#projects', label: t('header.projectsLabel') },
     { title: t('header.skills'), href: '#skills', label: t('header.skillsLabel') },
   ]
+
+  useEffect(() => {
+    function handleLangChange (lang: string) {
+      const language = lang === 'en' ? 'en' : 'pt-br'
+
+      document.documentElement.setAttribute('lang', language)
+    }
+
+    i18n.on('languageChanged', handleLangChange)
+
+    return () => {
+      i18n.off('languageChanged', handleLangChange)
+    }
+  }, [i18n])
 
   return (
     <S.Header>
