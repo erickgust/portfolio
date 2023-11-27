@@ -11,6 +11,7 @@ export const Header = styled.header`
   background: ${({ theme }) => theme.colors.dark};
   padding-top: 3.2rem;
   padding-bottom: 0.8rem;
+  height: 8rem;
 `
 
 export const List = styled.ul`
